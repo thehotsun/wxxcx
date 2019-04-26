@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <icon type='back' bindtap='goback'></icon> -->
+  <view class="title center"  >{{detail.title}}</view>
+  <view class='{{isCenter ? "center content" : "content"}}' style='white-space:pre-wrap'>{{detail.detail}}</view>
+  <view class='comment'>
+    <view>
+    评论区
+    </view>
+  </view>
+  <!-- <search placeholder="请写下你的精彩评论吧" styles="{{styles}}">
+    <text>发送</text>
+  </search> -->
+  <view class='bottom'>
+    <view class='{{isSend ? "send blue" : "send"}}' catchtap='onSend'>发送</view>
+    <input bindinput='onChange' value='{{commentValue}}' placeholder='请写下你的精彩评论吧'></input>
+  </view>
+  <view class='commentLists'>
+  <view class='commentList' wx:for="{{commentLists}}" wx:key="{{index}}">
+    <view class='userName'>{{item.userName}}</view>
+    <view class='userComments'>{{item.comments}}</view>
+    <view class='date'>{{item.date}}</view>
+  </view>
+  </view>
+</view>

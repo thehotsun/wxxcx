@@ -1,0 +1,22 @@
+/* compoents/input.wxss */
+.block{
+  position: fixed;
+    left: 0;
+  right: 0;
+  background: #f6f6f6;
+    height: 124rpx;
+  width: 100%；
+}
+/* .input::before{
+  content: '\e8ef'
+} */
+.input{
+  padding: 0 20rpx  0 50rpx;
+  background: #fff;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 20rpx;
+  margin: 20rpx auto;
+  height: 80rpx;
+  line-height: 80rpx;
+}

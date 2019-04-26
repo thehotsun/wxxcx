@@ -1,13 +1,18 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <button wx:if='{{access}}'  class='access' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
+  <!-- <input class='search' catchtap='goSearch'></input> -->
+  <search styles="{{styles}}" slotStyle="{{slotStyle}}"  placeholder="请输入搜索内容" isSearch="true">
+  <icon style="{{slotStyle}}" class='iconfont icon-search'></icon>
+  </search>
+  <view class='content'>
+    <view class='title' wx:for='{{text}}' wx:key="{{key}}" wx:for-index= 'key' >
+    <text>{{key}} : </text>
+    <view bindtap='goDetail'  data-key='{{key + " " + index}}'  wx:for='{{item}}' class='list' wx:key="{{index}}">
+      <text>{{item.title}}</text>
+    </view>
+  <!-- <view class='geli'></view> -->
+
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
   </view>
 </view>

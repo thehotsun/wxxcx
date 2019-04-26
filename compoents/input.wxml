@@ -1,0 +1,5 @@
+<!--compoents/input.wxml-->
+  <view class='block' style='{{styles}}'>
+    <input type="text" focus='{{focus}}' bindfocus='go' bindinput="onChange" class='input' placeholder='{{placeholder}}'  ></input>
+    <slot ></slot>
+  </view>

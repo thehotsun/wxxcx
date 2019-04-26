@@ -1,0 +1,10 @@
+/* pages/search.wxss */
+  .content{
+    margin: 124rpx 0 0  0;
+    padding: 40rpx 30rpx;
+  }
+    .list{
+    color: #3194d0;
+    font-size: 44rpx;
+    padding: 20rpx 50rpx;
+  }

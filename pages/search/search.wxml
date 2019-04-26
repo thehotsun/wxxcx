@@ -1,0 +1,9 @@
+<!--pages/search.wxml-->
+<view>
+    <search  isSearchPage="true" bind:search="onSearch" styles="{{styles}}" slotStyle="{{slotStyle}}"  placeholder="请输入搜索内容" >
+  <icon style="{{slotStyle}}" class='iconfont icon-search'></icon>
+  </search>
+  <view  class='content'>
+    <view bindtap='goDetail' data-key="{{item.key}}" wx:key="{{index}}" class='list' wx:for="{{result}}">{{item.title}}</view>
+  </view>
+</view>
